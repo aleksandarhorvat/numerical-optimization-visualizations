@@ -67,11 +67,11 @@ def update(val):
     # New point (red)
     x_new = xk + alpha * dk
     y_new = f(x_new)
-    new_point.set_data(x_new, y_new)
+    new_point.set_data([x_new], [y_new])
 
     # Purple RHS point moves along tilted orange line
     y_rhs = f(xk) + eta * gk * (x_new - xk)
-    rhs_point.set_data(x_new, y_rhs)
+    rhs_point.set_data([x_new], [y_rhs])
 
     # Tangent line (green, full slope)
     y_tangent = f(xk) + gk * (xs - xk)
